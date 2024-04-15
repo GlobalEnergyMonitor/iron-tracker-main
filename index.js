@@ -79,21 +79,21 @@ CONFIG.format = {
 //          order: order in the legend
 //          color: color on the map
 CONFIG.process_types = {
-  'electric': {text: 'Electric', order: 1, color: styles.status4, cssclass: 'status4'},
-  'electric_oxygen': {text: 'Electric, Oxygen', order: 2, color: styles.status5, cssclass: 'status5'},
+  // 'electric': {text: 'Electric', order: 1, color: styles.status4, cssclass: 'status4'},
+  // 'electric_oxygen': {text: 'Electric, Oxygen', order: 2, color: styles.status5, cssclass: 'status5'},
   'integrated_BF_and_DRI': {text: 'Integrated (BF and DRI)', order: 3, color: styles.status2, cssclass: 'status2'},
   'integrated_BF': {text: 'Integrated (BF)', order: 4, color: styles.status1, cssclass: 'status1'},
-  'integrated_DRI': {text: 'Integrated (DRI)', order: 5, color: styles.status3, cssclass: 'status3'},
-  'integrated_unknown': {text: 'Integrated (unknown)', order: 6, color: styles.status9, cssclass: 'status9'},
-  'integrated_other': {text: 'Integrated (other)', order: 6, color: styles.status9, cssclass: 'status9'},
-  'unknown': {text: 'Unknown', order: 7, color: styles.status11, cssclass: 'status11'}, 
-  'oxygen': {text: 'Oxygen', order: 8, color: styles.status6, cssclass: 'status6'}, 
+  // 'integrated_DRI': {text: 'Integrated (DRI)', order: 5, color: styles.status3, cssclass: 'status3'},
+  // 'integrated_unknown': {text: 'Integrated (unknown)', order: 6, color: styles.status9, cssclass: 'status9'},
+  // 'integrated_other': {text: 'Integrated (other)', order: 6, color: styles.status9, cssclass: 'status9'},
+  // 'unknown': {text: 'Unknown', order: 7, color: styles.status11, cssclass: 'status11'}, 
+  // 'oxygen': {text: 'Oxygen', order: 8, color: styles.status6, cssclass: 'status6'}, 
   'ironmaking_BF': {text: 'Ironmaking (BF)', order: 9, color: styles.status7, cssclass: 'status7'}, 
-  'ironmaking_DRI': {text: 'Ironmaking (DRI)', order: 10, color: styles.status10, cssclass: 'status10'}, 
+  // 'ironmaking_DRI': {text: 'Ironmaking (DRI)', order: 10, color: styles.status10, cssclass: 'status10'}, 
   'ironmaking_BF_and_DRI': {text: 'Ironmaking (BF and DRI)', order: 11, color: styles.status12, cssclass: 'status12'}, 
-  'ironmaking_unknown': {text: 'Ironmaking (unknown)', order: 12, color: styles.status8, cssclass: 'status8'}, 
-  'ironmaking_other': {text: 'Ironmaking (other)', order: 13, color: styles.status13, cssclass: 'status13'}, 
-  'steelmaking_other': {text: 'Steelmaking (other)', order: 14, color: styles.status14, cssclass: 'status14'}, 
+  // 'ironmaking_unknown': {text: 'Ironmaking (unknown)', order: 12, color: styles.status8, cssclass: 'status8'}, 
+  // 'ironmaking_other': {text: 'Ironmaking (other)', order: 13, color: styles.status13, cssclass: 'status13'}, 
+  // 'steelmaking_other': {text: 'Steelmaking (other)', order: 14, color: styles.status14, cssclass: 'status14'}, 
 };
 
 // define secondary "types" here. These also get a set of checkboxes for filtering the map 
@@ -123,7 +123,7 @@ CONFIG.ch_provinces = ['Anhui','Beijing','Chongqing','Fujian','Gansu','Guangdong
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
   // data initialization first, then the remaining init steps
-  Promise.all([initData('./data/map_file_gspt2024-04-15.csv'), initData('./data/countries.json')])
+  Promise.all([initData('./data/map_file_gbft2024-04-15.csv'), initData('./data/countries.json')])
     .then(function(data) {
       initDataFormat(data)    // get data ready for use
       initButtons();          // init button listeners
